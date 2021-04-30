@@ -1,0 +1,16 @@
+class Solution {
+public:
+    double angleClock(int hour, int minutes) 
+    {
+        float h=(hour%12+(float)minutes/60)*30;
+        float m=minutes*6;
+        
+        float ans=fabs(h-m);
+        if(ans>180)
+        {
+            ans=360-ans;
+        }
+        return ans;
+        
+    }
+};
